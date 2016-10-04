@@ -1,0 +1,33 @@
+{
+  "name": "@flutterwave/flw-notif",
+  "version": "0.0.1",
+  "description": "A simple library for interfacing with the flutterwave notification service",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flutterwave/notification-library.git"
+  },
+  "keywords": [
+    "notification",
+    "flutterwave"
+  ],
+  "author": "4y0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flutterwave/notification-library/issues"
+  },
+  "homepage": "https://github.com/Flutterwave/notification-library#readme",
+  "dependencies": {
+    "morx": "0.0.2",
+    "mosc": "1.0.0",
+    "q": "1.4.1",
+    "request": "2.75.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.1.0"
+  }
+}
