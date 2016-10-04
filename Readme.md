@@ -10,13 +10,12 @@ var Notif = require('flw-notif');
 var notif = new Notif('_APP_TOKEN_');
 
 /*
-If you wish to use a diff service url other than the default.
-do 
+If you wish to use a diff service url other than the default. Do:
 
 - notif.setSmsUrl('new sms url')
 - notif.setEmailUrl('new email url')
 
-Ensure these are set before you call any of the sendEmail / sendSms functions 
+Ensure these are set before you call any of the sendEmail / sendSms functions (if you wish to use a diff service url that is)
 */
 
 
@@ -61,3 +60,17 @@ Valid smsData
 
 
 ```
+
+The templating engine used is mustache, hence it is possible to pass placeholders as part of the sent data. They will be used to replace the actual place holders in the template file. As an example consider the following template
+```
+Hello {{username}},
+Your account on FLW has been created. Please use this token {{usertoken}} to log in.
+```
+If 
+```
+"placeholders" : {
+	"username":"DeoleKingsley",
+	"usertoken":"FLW-OIE993003"
+}
+```
+is passed as a value for the placeholders property, {{username}} in the template becomes DeoleKingsley and {{usertoken}} becomes FLW-OIE9933003
