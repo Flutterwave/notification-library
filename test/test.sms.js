@@ -51,7 +51,7 @@ describe('#NotificationSMSService', function () {
 			        "user": "123455ss"
 			    }
 			};
-		notifDelegate('57f39da1e9f464d11843a29f', data, 'sendSMS')()
+		notifDelegate('90933-NSJKD-ASKD', data, 'sendSMS')()
 		.then( function (response) {
 			response = JSON.parse(response);
 			expect(response).to.have.property('status').to.equal('error');
@@ -67,11 +67,14 @@ describe('#NotificationSMSService', function () {
 
 	it('Should successfully queue an SMS for sending', function (done) {
 		var data = {
-			    "template_id" : "57f3a76ce9f464d11843a2a3",
+			    "template_id" : "5800ef819d625ced5e8431a4",
 			    "sender" : "PWC",
-			    "receiver" : "08140732882"
+			    "receiver" : "+2348140732882",
+			    "placeholders": {
+			    	"senderName":"Deji Naiwo"
+			    }
 			};
-		notifDelegate('57f39da1e9f464d11843a29f', data, 'sendSMS')()
+		notifDelegate('90933-NSJKD-ASKD'/*'90933-NSJKD-ASKD'*/, data, 'sendSMS')()
 		.then( function (response) {
 			response = JSON.parse(response); console.log(response);
 			expect(response).to.have.property('status').to.equal('ok');

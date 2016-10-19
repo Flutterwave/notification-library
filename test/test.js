@@ -62,12 +62,12 @@ describe('#NotificationService', function () {
 	it('Should successfully queue an email for sending', function (done) {
 
 		var data = {
-			'template_id':'57f3a06ce9f464d11843a2a2',
+			'template_id':'5805ebe718732edb5dab67ba',
 			'sender_name':'PWC',
-			'sender_email':'ayodeji@paywithcapture.com',
-			'receiver_email':'ayodeji@paywithcapture.com'
+			'sender_email':'noreply@thrivesend.com',
+			'receiver_email':'ayodejsol@gmail.com'
 		};
-		notifDelegate('57f39da1e9f464d11843a29f', data, 'sendEmail')()
+		notifDelegate('90933-NSJKD-ASKD', data, 'sendEmail')()
 		.then( function (response) {
 			response = JSON.parse(response); console.log(response);
 			expect(response).to.have.property('status').to.equal('ok');

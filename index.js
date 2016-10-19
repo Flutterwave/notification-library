@@ -36,7 +36,15 @@ function flwNotification ( APP_TOKEN )
 
 		var validateresult;
 		validateresult = morx.validate( emailData, methodSpec.queueEmail, MORX_DEFAULT);
-		validateresult.params.app_id = this.APP_TOKEN;
+		validateresult.params.app_token = this.APP_TOKEN;
+
+		if(!validateresult.params.placeholders){
+			validateresult.params.placeholders = {_____nit:23};
+		}
+		else
+		{
+			validateresult.params.placeholders._____nit = 23;
+		}
 
 		makeRequest(email_url, validateresult.params)
 		.then( function(response) {
@@ -57,7 +65,15 @@ function flwNotification ( APP_TOKEN )
 
 		var validateresult;
 		validateresult = morx.validate( smsData, methodSpec.queueSMS, MORX_DEFAULT);
-		validateresult.params.app_id = this.APP_TOKEN;
+		validateresult.params.app_token = this.APP_TOKEN;
+
+		if(!validateresult.params.placeholders){
+			validateresult.params.placeholders = {_____nit:23};
+		}
+		else
+		{
+			validateresult.params.placeholders._____nit = 23;
+		}
 
 		makeRequest(sms_url, validateresult.params)
 		.then( function(response) {
