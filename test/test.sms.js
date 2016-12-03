@@ -69,7 +69,7 @@ describe('#NotificationSMSService', function () {
 		var data = {
 			    "template_id" : "5800ef819d625ced5e8431a4",
 			    "sender" : "PWC",
-			    "receiver" : "+2348140732882",
+			    "receiver" : "+2348068369634",
 			    "placeholders": {
 			    	"senderName":"Deji Naiwo"
 			    }

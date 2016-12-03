@@ -13,9 +13,9 @@ function flwNotification ( APP_TOKEN )
 {
 	
 	var validateresult, email_url, sms_url;
-
-	email_url = "http://pwc-queue.eu-central-1.elasticbeanstalk.com:3000/api/queue/email"; //default email url;
-	sms_url   = "http://pwc-queue.eu-central-1.elasticbeanstalk.com:3000/api/queue/sms"; //default email url;
+	//https://emailnotificationqueue.herokuapp.com/
+	email_url = "https://emailnotificationqueue.herokuapp.com/queue/email"; //default email url;
+	sms_url   = "https://emailnotificationqueue.herokuapp.com/queue/sms"; //default email url;
 
 	this.setSmsUrl   = function (new_sms_url)   { sms_url   = new_sms_url;   };
 	this.setEmailUrl = function (new_email_url) { email_url = new_email_url; };
