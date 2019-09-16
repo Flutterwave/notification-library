@@ -128,6 +128,7 @@ methodSpec['queueEmail'] = morx.spec({})
 							.build('sender_email', 'required:true')
 							.build('sender_name', 'required:true') 
 							.build('receiver_email', 'required:true') 
+							.build('cc_emails', 'required:true') 
 							.build('placeholders', 'required:false')  
 							.end();
 
